@@ -1,4 +1,4 @@
-#fonts-powerline
+# fonts-powerline
 ```
 git clone https://github.com/powerline/fonts.git
 
