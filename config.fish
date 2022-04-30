@@ -22,4 +22,4 @@ abbr -a - cd -
 
 
 set -g theme_color_scheme gruvbox
-
+starship init fish | source
