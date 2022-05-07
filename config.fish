@@ -1,5 +1,5 @@
 set -U FZF_LEGACY_KEYBINDINGS 0
-
+set fish_greeting
 
 
 set PATH /usr/local/bin $PATH
