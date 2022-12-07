@@ -26,8 +26,10 @@ function run_tmux
     set sessions (tmux list-sessions)
     set new_session "Create New Session" 
     if test -z "$sessions"
-      echo $new_session | peco --on-cancel=error
-      exec tmux
+      set check_new (echo $new_session | peco --on-cancel=error)
+      if test "$check_new" = $new_session
+        exec tmux 
+      end
     else if test -n "$sessions"
       set id (echo $new_session\n$sessions | peco --on-cancel=error | cut -d: -f1)
       if test $id = $new_session
