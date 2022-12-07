@@ -32,9 +32,9 @@ function run_tmux
       end
     else if test -n "$sessions"
       set id (echo $new_session\n$sessions | peco --on-cancel=error | cut -d: -f1)
-      if test $id = $new_session
+      if test "$id" = $new_session
         exec tmux 
-      else if test -n $id
+      else if test -n "$id"
         exec tmux a -t $id
       end
     end
